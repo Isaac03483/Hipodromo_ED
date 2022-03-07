@@ -20,6 +20,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jLabel1" alignment="1" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
+              <Component id="botonGuardarRes" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -33,27 +39,23 @@
                   <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel13" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="66" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="textoPosicionDos" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                  <Component id="textoGanador" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                  <Component id="textoPosicionDiez" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                  <Component id="textoPosicionNueve" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                  <Component id="textoPosicionOcho" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                  <Component id="textoPosicionSiete" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                  <Component id="textoPosicionCinco" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                  <Component id="textoPosicionSeis" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                  <Component id="textoPosicionTres" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
-                  <Component id="textoPosicionCuatro" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="textoPosicionDos" alignment="0" pref="118" max="32767" attributes="0"/>
+                  <Component id="textoGanador" alignment="0" pref="118" max="32767" attributes="0"/>
+                  <Component id="textoPosicionDiez" alignment="0" pref="118" max="32767" attributes="0"/>
+                  <Component id="textoPosicionNueve" alignment="0" pref="118" max="32767" attributes="0"/>
+                  <Component id="textoPosicionOcho" alignment="0" pref="118" max="32767" attributes="0"/>
+                  <Component id="textoPosicionSiete" alignment="0" pref="118" max="32767" attributes="0"/>
+                  <Component id="textoPosicionSeis" alignment="0" pref="118" max="32767" attributes="0"/>
+                  <Component id="textoPosicionCinco" alignment="0" pref="118" max="32767" attributes="0"/>
+                  <Component id="textoPosicionTres" alignment="0" pref="118" max="32767" attributes="0"/>
+                  <Component id="textoPosicionCuatro" alignment="0" pref="118" max="32767" attributes="0"/>
+                  <Component id="jComboBox1" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-          </Group>
-          <Component id="jLabel1" alignment="1" max="32767" attributes="0"/>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="172" max="-2" attributes="0"/>
-              <Component id="botonGuardarRes" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -84,12 +86,12 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="textoPosicionSeis" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="textoPosicionCinco" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="textoPosicionCinco" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="textoPosicionSeis" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -112,22 +114,27 @@
                   <Component id="textoPosicionDiez" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="39" max="32767" attributes="0"/>
               <Component id="botonGuardarRes" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="29" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="textoPosicionCinco">
-      <Events>
-        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoPosicionCincoKeyReleased"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JTextField" name="textoPosicionSeis">
       <Events>
         <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoPosicionSeisKeyReleased"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="textoPosicionCinco">
+      <Events>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="textoPosicionCincoKeyReleased"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="textoPosicionSiete">
@@ -233,6 +240,24 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonGuardarResActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Orden de los resultados:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jComboBox1">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="2">
+            <StringItem index="0" value="Alfab&#xe9;tico"/>
+            <StringItem index="1" value="Num&#xe9;rico"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

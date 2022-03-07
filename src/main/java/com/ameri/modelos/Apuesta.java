@@ -34,7 +34,7 @@ public class Apuesta {
     }
 
     public void setPuntos(int puntos) {
-        this.puntos = puntos;
+        this.puntos += puntos;
     }
 
     public Resultado getResultado() {
@@ -43,6 +43,14 @@ public class Apuesta {
 
     public void setResultado(Resultado resultado) {
         this.resultado = resultado;
+    }
+
+    public void calcularPuntos(Resultado resultado){
+        for(int i = 0; i < resultado.getResultado().length; i++){
+            if(this.getResultado().getResultado()[i] == resultado.getResultado()[i]){
+                this.setPuntos(10-i);
+            }
+        }
     }
 
     @Override

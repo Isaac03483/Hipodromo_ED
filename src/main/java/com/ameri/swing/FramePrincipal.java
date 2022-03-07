@@ -4,8 +4,11 @@
  */
 package com.ameri.swing;
 
+import com.ameri.backend.Calculador;
 import com.ameri.backend.GeneradorArchivo;
+import com.ameri.backend.Ordenamiento;
 import com.ameri.backend.Verificacion;
+import com.ameri.enums.Orden;
 import com.ameri.modelos.Apuesta;
 import com.ameri.modelos.Resultado;
 import com.ameri.utilidades.Lista;
@@ -26,6 +29,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         this.listaApuesta = new Lista<>();
         initComponents();
         this.setLocationRelativeTo(null);
+        this.orden = Orden.ALFABETICO;
     }
 
     /**
@@ -148,6 +152,8 @@ public class FramePrincipal extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, "Error al intentar guardar el archivo", "Error", JOptionPane.ERROR_MESSAGE);
                 }
             }
+            this.ApuestaEntrada.setEnabled(false);
+            this.ApuestaEntrada.setToolTipText("Apuestas temporalmente bloqueadas.");
         }
     }//GEN-LAST:event_ApuestaCierreActionPerformed
 
@@ -157,8 +163,18 @@ public class FramePrincipal extends javax.swing.JFrame {
 
 
         if(this.resultado != null && !this.listaApuesta.estaVacia()){
-
+            Calculador.calcularPunteo(this.listaApuesta.getPrimerNodo(), this.resultado);
+            new Ordenamiento(this.listaApuesta, this.orden).ordenar();
+            try {
+                new GeneradorArchivo(this.listaApuesta).generarArchivo("Nombre,Monto,Puntos,1er lugar,2do lugar,3er lugar,4to lugar, 5to lugar" +
+                        ",6to lugar,7mo lugar,8vo lugar,9no lugar,10mo lugar");
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(null, "Error al intentar guardar el archivo", "Error", JOptionPane.ERROR_MESSAGE);
+            }
         }
+        this.ApuestaEntrada.setEnabled(true);
+        this.ApuestaEntrada.setToolTipText("");
+        this.listaApuesta.vaciarLista();
     }//GEN-LAST:event_ResultadoEntradaActionPerformed
 
     public Lista<Apuesta> getListaApuesta(){
@@ -173,8 +189,17 @@ public class FramePrincipal extends javax.swing.JFrame {
         this.resultado = resultado;
     }
 
+    public void setOrden(Orden orden){
+        this.orden = orden;
+    }
+
+    public Orden getOrden(){
+        return this.orden;
+    }
+
     private Lista<Apuesta> listaApuesta;
     private Resultado resultado;
+    private Orden orden;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ApuestaCierre;
     private javax.swing.JButton ApuestaEntrada;

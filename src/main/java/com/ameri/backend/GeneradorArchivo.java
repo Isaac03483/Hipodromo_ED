@@ -3,12 +3,14 @@ package com.ameri.backend;
 import com.ameri.modelos.Apuesta;
 import com.ameri.modelos.NodoApuesta;
 import com.ameri.utilidades.Lista;
+import org.apache.commons.io.FilenameUtils;
 
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Objects;
 
 public class GeneradorArchivo {
 
@@ -24,7 +26,12 @@ public class GeneradorArchivo {
         guardar.setVisible(true);
         guardar.dispose();
         if(guardar.getFile() != null && guardar.getDirectory() != null){
-            FileWriter writer = new FileWriter(guardar.getDirectory()+guardar.getFile()+".csv");
+            FileWriter writer;
+            if(!Objects.equals(FilenameUtils.getExtension(guardar.getFile()), "csv")){
+                writer= new FileWriter(guardar.getDirectory()+guardar.getFile()+".csv");
+            } else {
+                writer = new FileWriter(guardar.getDirectory()+guardar.getFile());
+            }
             String resultado = columnas+"\n";
             resultado += escribirArchivo(lista.getPrimerNodo());
             writer.write(resultado);
