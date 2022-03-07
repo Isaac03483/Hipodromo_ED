@@ -1,8 +1,6 @@
 package com.ameri.utilidades;
 
-import com.ameri.modelos.Apuesta;
 import com.ameri.modelos.NodoApuesta;
-import com.ameri.modelos.Resultado;
 
 public class Lista<T> {
 
@@ -15,7 +13,6 @@ public class Lista<T> {
             primerNodo = new NodoApuesta<>(valor, null, null);
             ultimoNodo = primerNodo;
         } else {
-
 
             if(ultimoNodo == primerNodo){
                 ultimoNodo = new NodoApuesta<>(valor, primerNodo, null);

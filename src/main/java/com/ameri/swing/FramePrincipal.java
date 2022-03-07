@@ -175,6 +175,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         this.ApuestaEntrada.setEnabled(true);
         this.ApuestaEntrada.setToolTipText("");
         this.listaApuesta.vaciarLista();
+
     }//GEN-LAST:event_ResultadoEntradaActionPerformed
 
     public Lista<Apuesta> getListaApuesta(){
